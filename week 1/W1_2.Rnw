@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+# My Script
+
+Here is my linear model
+
+
+<<>>=
+x <- 1:10
+y <- rnorm(10)
+plot(x,y)
+fit <- lm(y ~ x)
+@
+
+
+
+
+
+
+\end{document}

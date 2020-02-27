@@ -41,12 +41,14 @@ dim(cars);
 colnames(cars[2])
 
 
-The simplest way to extract the columns of a matrix or data.frame is using [. For example you can access the second column with cars[,2].
+T"Q : e simplest way to extract the columns of a matrix or data.frame is using [. For example you can access the second column with cars[,2].
                                                                             
 What is the average distance traveled in this dataset?
 
-mean(cars[,2])
+ "mean(cars[,2])
 
-which(cars$dist == 85)
+wh"Q : Find Row Having Distance =85"
+
+ich(cars$dist == 85)
 
 
