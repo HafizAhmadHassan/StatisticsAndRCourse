@@ -1,0 +1,53 @@
+
+
+Read in the file femaleMiceWeights.csv and 
+report the exact name of the column containing the weights. 
+
+```{r}
+data <- read.csv("femaleControlsPopulation.csv")
+
+
+data2 <- read.csv("femaleMiceWeights.csv")
+head(data2)   # inspect first 6 rows across all columns
+names(data2)[2] 
+```
+
+
+The [ and ] symbols can be used to extract specific rows and specific columns of the table.
+
+What is the entry in the 12th row and second column?
+```{r}
+data2 <- read.csv("femaleMiceWeights.csv")
+data2[12,2]
+```
+
+
+You should have learned how to use the $ character to extract a column from a table and return it as a vector. Use $ to extract the weight column and report the weight of the mouse in the 11th row.
+
+
+```{r}
+length(data2$Bodyweight)
+```
+
+
+To create a vector with the numbers 3 to 7, we can use seq(3,7) or, because they are consecutive, 3:7. View the data and determine what rows are associated with the high fat or hf diet. Then use the mean() function to compute the average weight of these mice.
+
+What is the average weight of mice on the high fat diet?
+
+
+```{r}
+mean(data2$Bodyweight[which(data2$Diet == 'hf')])
+
+```
+
+One of the functions we will be using often is sample(). Read the help file for sample() using ?sample. Now take a random sample of size 1 from the numbers 13 to 24 and report back the weight of the mouse represented by that row. Make sure to type set.seed(1) to ensure that everybody gets the same answer.
+
+
+```{r}
+set.seed(1)
+i <- sample(13:24,1)
+
+print(i)
+data2$Bodyweight[i]
+```
+
